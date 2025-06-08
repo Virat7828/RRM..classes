@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RRM Classes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      height: 100%;
+      background-color: #8b0c3f;
+      color: #2b004a;
+      font-size: 20px;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    header {
+      background-color: #0d47a1;
+      color: black;
+      padding: 1rem;
+      text-align: center;
+    }
+    main {
+      flex: 1;
+      padding: 1rem;
+      overflow-y: auto;
+      margin-bottom: 120px;
+    }
+    .content-section {
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    .content-section.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .bottom-nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #ffffff;
+      border-top: 1px solid #ccc;
+      padding: 0.3rem 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      font-size: 0.7rem;
+      overflow-x: auto;
+    }
+    .bottom-nav button {
+      background: none;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.2rem;
+      flex: 1;
+      padding: 0.3rem;
+      transition: transform 0.2s;
+    }
+    .bottom-nav button:hover {
+      transform: scale(1.1);
+    }
+    .bottom-nav img {
+      width: 32px;
+      height: 32px;
+    }
+    .note, .announcement {
+      background: #ff69b4;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .note:hover, .announcement:hover {
+      transform: scale(1.02);
+    }
+    .class-buttons button {
+      margin: 0.3rem;
+      padding: 0.5rem 1rem;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .class-buttons button:hover {
+      background-color: #125ea2;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="color: black;">RRM Classes</h1>
+    <p>Class-wise Notes & Announcements</p>
+  </header>
+  <main>
+    <section id="home" class="content-section active">
+      <h2>📘 RRM Classes – Your Smart Study Companion for Classes 8 to 12 📝</h2>
+      <p>Welcome to RRM Classes, a powerful online platform designed to support students of Class 8 to 12 in mastering their subjects with clarity, confidence, and consistency. No video lectures, no distractions — just pure, focused learning through well-structured notes, daily practice, and smart assessments.</p>
+      <ul>
+        <li>✅ Chapter-Wise Notes – Clear, concise, and exam-oriented notes aligned with NCERT and board syllabi.</li>
+        <li>✅ Daily Practice Questions (DPQs) – Sharpen your understanding with regular topic-based questions.</li>
+        <li>✅ Mock Tests & Previous Year Papers – Prepare with confidence using full-length tests and solved PYQs.</li>
+        <li>✅ Quizzes & Assignments – Engage in interactive learning and test your concepts instantly.</li>
+        <li>✅ Doubt Corner – Ask your doubts anytime and get expert-written explanations.</li>
+        <li>✅ Smart Progress Tracker – Know your strengths, fix your weak areas, and grow faster.</li>
+      </ul>
+      <p>
+        ✨ <strong>Why RRM Classes Stands Out:</strong><br />
+        📂 Organized Content by Subject & Class – No confusion, just clean and easy navigation.<br />
+        🧠 Designed by Experienced Educators – Content crafted by subject experts for real exam needs.<br />
+        📲 Mobile-Optimized Design – Study comfortably on your phone or computer.<br />
+        📌 Zero Ads. Zero Noise. 100% Learning.
+      </p>
+      <p>
+        🔍 <strong>Ideal For:</strong><br />
+        Students of Classes 8 to 12 (CBSE, ICSE & State Boards)<br />
+        Those who prefer reading, writing, and practicing over watching videos<br />
+        Learners looking for a distraction-free and exam-focused study experience<br />
+        Parents who want affordable, structured study material for their children
+      </p>
+      <p>
+        🌟 <strong>Learn. Practice. Succeed.</strong><br />
+        RRM Classes isn’t just another study site — it’s your daily academic partner, helping you stay on track, improve every day, and reach your goals with confidence.
+      </p>
+      <p>
+        👉 Join thousands of students who trust RRM Classes.<br />
+        Start your journey to academic excellence today!
+      </p>
+    </section>
+    <section id="notes" class="content-section">
+      <h2>📒 Notes</h2>
+      <p>Explore class-wise and chapter-wise study materials, PDFs, and important notes here.</p>
+    </section>
+    <section id="announcements" class="content-section">
+      <h2>📢 Announcements</h2>
+      <p>Stay updated with latest news, schedules, and notifications from RRM Classes.</p>
+    </section>
+    <section id="admin" class="content-section">
+      <h2>⚙️ Admin Panel</h2>
+      <p>Admin access for managing content, announcements, and student progress.</p>
+    </section>
+    <section id="subjects" class="content-section">
+      <h2>📚 Subjects</h2>
+      <p>Browse all subjects across classes. Select a subject to view relevant materials.</p>
+    </section>
+    <section id="teachers" class="content-section">
+      <h2>👨‍🏫 Teachers</h2>
+      <p>Meet our expert educators guiding you through every concept and topic.</p>
+    </section>
+  </main>
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <button onclick="showSection('home')">
+      <img src="https://img.icons8.com/color/48/home--v1.png" alt="Home" />
+      <span>Home</span>
+    </button>
+    <button onclick="showSection('notes')">
+      <img src="https://img.icons8.com/office/40/notebook.png" alt="Notes" />
+      <span>Notes</span>
+    </button>
+    <button onclick="showSection('announcements')">
+      <img src="https://img.icons8.com/color/48/megaphone.png" alt="Announcements" />
+      <span>Announcements</span>
+    </button>
+    <button onclick="showSection('admin')">
+      <img src="https://img.icons8.com/color/48/admin-settings-male.png" alt="Admin" />
+      <span>Admin</span>
+    </button>
+    <button onclick="showSection('subjects')">
+      <img src="https://img.icons8.com/color/48/book.png" alt="Subjects" />
+      <span>Subjects</span>
+    </button>
+    <button onclick="showSection('teachers')">
+      <img src="https://img.icons8.com/color/48/teacher.png" alt="Teachers" />
+      <span>Teachers</span>
+    </button>
+  </nav>
+
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll('.content-section').forEach(sec => {
+        sec.classList.remove('active');
+      });
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
